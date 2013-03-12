@@ -1,0 +1,13 @@
+set editing-mode vi
+$if mode=vi
+    set keymap vi-command
+    # these are for vi-command mode
+
+    set keymap vi-insert
+    # these are for vi-insert mode
+
+    #"\C-p":dynamic-complete-history
+    "\C-p":dabbrev-expand
+    #"\C-n":menu-complete
+
+$endif
