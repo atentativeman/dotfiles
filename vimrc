@@ -31,6 +31,7 @@ set showcmd
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
 set hlsearch
+set incsearch
 
 " Use case insensitive search, except when using capital letters
 set ignorecase
@@ -43,7 +44,7 @@ set autoindent
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 
 set cursorline
-set nowrap
+"set nowrap
 set showmatch
 
 set expandtab
@@ -56,7 +57,7 @@ set softtabstop=4
 set ruler
 
 " Display line numbers on the left
-set number
+"set number
 
 " Why is this not a default
 set hidden
@@ -65,9 +66,18 @@ set hidden
 set showmode
 
 "Store lots of :cmdline history
-set history=1000
+set history=1500
 
 set background=dark
+
+"relativenumber changes Vim’s line number column to display how far away each
+"line is from the current one, instead of showing the absolute line number.
+set relativenumber
+
+"undofile tells Vim to create <FILENAME>.un~ files whenever you edit a file.
+"These files contain undo information so you can undo previous actions even
+"after you close and reopen a file.
+set undofile
 
 if &term =~ '256color'
 " Disable Background Color Erase (BCE) so that color schemes
