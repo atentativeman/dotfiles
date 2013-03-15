@@ -54,9 +54,9 @@ if has('autocmd')
 "  moving around, searching and patterns
 " ----------------------------------------------------------------------------
 set nostartofline     " keep cursor in same column for long-range motion cmds
-set incsearch			    " Highlight pattern matches as you type
-set ignorecase			  " ignore case when using a search pattern
-set smartcase			    " override 'ignorecase' when pattern
+set incsearch		  " Highlight pattern matches as you type
+set ignorecase		  " ignore case when using a search pattern
+set smartcase	      " override 'ignorecase' when pattern
                       " has upper case character
 
 " ----------------------------------------------------------------------------
@@ -69,17 +69,17 @@ set smartcase			    " override 'ignorecase' when pattern
 set scrolloff=3       " number of screen lines to show around
                       " the cursor
 
-set linebreak			    " For lines longer than the window,
+set linebreak	      " For lines longer than the window,
                       " wrap intelligently. This doesn't
                       " insert hard line breaks.
 
-set showbreak=↪\ \ 		" string to put before wrapped screen
+set showbreak=↪\ \    " string to put before wrapped screen
                       " lines
 
-set sidescrolloff=2		" min # of columns to keep left/right of cursor
+set sidescrolloff=2	  " min # of columns to keep left/right of cursor
 set display+=lastline " show last line, even if it doesn't fit in the window
 
-set cmdheight=2 		  " # of lines for the command window
+set cmdheight=2 	  " # of lines for the command window
                       " cmdheight=2 helps avoid 'Press ENTER...'
                       " prompts
 
@@ -92,33 +92,33 @@ if &listchars ==# 'eol:$'
   endif
 endif
 
-set number			      " show line numbers
+set number			  " show line numbers
 
 " ----------------------------------------------------------------------------
 "  syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
-colorscheme wombat256mod
 set background=dark
 set colorcolumn=80    " display a line in column 80 to show you
                       " when to line break.
+colorscheme wombat256mod
 
 " ----------------------------------------------------------------------------
 "  multiple windows
 " ----------------------------------------------------------------------------
-set laststatus=2  		" Show a status line, even if there's only one
+set laststatus=2      " Show a status line, even if there's only one
                       " Vim window
 
-set hidden		    	  " allow switching away from current buffer w/o
+set hidden		      " allow switching away from current buffer w/o
                       " writing
 
-set switchbuf=usetab " Jump to the 1st open window which contains
+set switchbuf=usetab  " Jump to the 1st open window which contains
                       " specified buffer, even if the buffer is in
                       " another tab.
                       " TODO: Add 'split' if you want to split the
                       " current window for a quickfix error window.
 
 set statusline=
-set statusline+=b%-1.3n\ >                    " buffer number
+set statusline+=b%-1.3n\ > " buffer number
 "set statusline+=\ %{fugitive#statusline()}:
 set statusline+=\ %F
 set statusline+=\ %M
@@ -132,7 +132,7 @@ set statusline+=\ <\ %{&fenc}
 set statusline+=\ <\ %{&ff}
 set statusline+=\ <\ %p%%
 set statusline+=\ %l:
-set statusline+=%02.3c   	" cursor line/total lines
+set statusline+=%02.3c    " cursor line/total lines
 
 set helpheight=30         " Set window height when opening Vim help windows
 
@@ -162,10 +162,10 @@ set ttyfast			      " this is the 21st century, people
 "  messages and info
 " ----------------------------------------------------------------------------
 
-set showcmd			    " In the status bar, show incomplete commands
+set showcmd			" In the status bar, show incomplete commands
                     " as they are typed
 
-set ruler			      " Always display the current cursor position in
+set ruler           " Always display the current cursor position in
                     " the Status Bar
 
 set confirm         " Ask to save buffer instead of failing when executing
@@ -186,20 +186,24 @@ if v:version > 703 || v:version == 703 && has("patch541")
                         " joining two commented lines
 endif
 
-set showmatch  			    " when inserting a bracket, briefly jump to its
+set showmatch  		    " when inserting a bracket, briefly jump to its
                         " match
 
-set nojoinspaces	  	  " Use only one space after '.' when joining
+set nojoinspaces  	    " Use only one space after '.' when joining
                         " lines, instead of two
 
-"set completeopt+=longest 	" better omni-complete menu
+"set completeopt+=longest  " better omni-complete menu
 
 "set nrformats-=octal      " don't treat numbers with leading zeros as octal
-                          " when incrementing/decrementing
+                           " when incrementing/decrementing
 
 " ----------------------------------------------------------------------------
 "  tabs and indenting
 " ----------------------------------------------------------------------------
+set expandtab
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set smarttab              " <TAB> in front of line inserts 'shiftwidth' blanks
 set shiftround            " round to 'shiftwidth' for "<<" and ">>" 
 
