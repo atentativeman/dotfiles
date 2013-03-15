@@ -1,9 +1,13 @@
+" Use Vim settings, rather than Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
 " ----------------------------------------------------------------------------
 "  Vundle setup
 " ----------------------------------------------------------------------------
-filetype off 			" Required for Vundle
+filetype off                   " Required for Vundle
 
-set rtp+=~/.vim/bundle/vundle/	" Add vundle to the RuntimePath
+set rtp+=~/.vim/bundle/vundle/ " Add vundle to the RuntimePath
 call vundle#rc()
 
 " Let Vundle manage Vundle. Required!
@@ -21,6 +25,7 @@ Bundle 'gmarik/vundle'
 " Git plugins
 "Bundle 'tpope/vim-fugitive'
 "Bundle 'gregsexton/gitv'
+Bundle  'godlygeek/tabular'
 
 " Lightweight support for Ruby's Bundler
 "Bundle 'tpope/vim-bundler'
@@ -53,11 +58,11 @@ if has('autocmd')
 " ----------------------------------------------------------------------------
 "  moving around, searching and patterns
 " ----------------------------------------------------------------------------
-set nostartofline     " keep cursor in same column for long-range motion cmds
-set incsearch		  " Highlight pattern matches as you type
-set ignorecase		  " ignore case when using a search pattern
-set smartcase	      " override 'ignorecase' when pattern
-                      " has upper case character
+set nostartofline      " keep cursor in same column for long-range motion cmds
+set incsearch          " Highlight pattern matches as you type
+set ignorecase         " ignore case when using a search pattern
+set smartcase          " override 'ignorecase' when pattern
+                       " has upper case character
 
 " ----------------------------------------------------------------------------
 "  tags
@@ -66,22 +71,22 @@ set smartcase	      " override 'ignorecase' when pattern
 " ----------------------------------------------------------------------------
 "  displaying text
 " ----------------------------------------------------------------------------
-set scrolloff=3       " number of screen lines to show around
-                      " the cursor
+set scrolloff=3        " number of screen lines to show around
+                       " the cursor
 
-set linebreak	      " For lines longer than the window,
-                      " wrap intelligently. This doesn't
-                      " insert hard line breaks.
+set linebreak          " For lines longer than the window,
+                       " wrap intelligently. This doesn't
+                       " insert hard line breaks.
 
-set showbreak=↪\ \    " string to put before wrapped screen
-                      " lines
+set showbreak=↪\ \     " string to put before wrapped screen
+                       " lines
 
-set sidescrolloff=2	  " min # of columns to keep left/right of cursor
-set display+=lastline " show last line, even if it doesn't fit in the window
+set sidescrolloff=2    " min # of columns to keep left/right of cursor
+set display+=lastline  " show last line, even if it doesn't fit in the window
 
-set cmdheight=2 	  " # of lines for the command window
-                      " cmdheight=2 helps avoid 'Press ENTER...'
-                      " prompts
+set cmdheight=2        " # of lines for the command window
+                       " cmdheight=2 helps avoid 'Press ENTER...'
+                       " prompts
 
 " Define characters to show when you show formatting
 " stolen from https://github.com/tpope/vim-sensible
@@ -92,8 +97,8 @@ if &listchars ==# 'eol:$'
   endif
 endif
 
-set number			  " show line numbers
-
+set number			   " show line numbers
+set relativenumber " show line numbers relative to the cursor
 " ----------------------------------------------------------------------------
 "  syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
@@ -162,7 +167,7 @@ set ttyfast			      " this is the 21st century, people
 "  messages and info
 " ----------------------------------------------------------------------------
 
-set showcmd			" In the status bar, show incomplete commands
+set showcmd			    " In the status bar, show incomplete commands
                     " as they are typed
 
 set ruler           " Always display the current cursor position in
@@ -182,20 +187,18 @@ set clipboard=unnamed	" Yank to the system clipboard by default
 set backspace=indent,eol,start  "backspace over everything
 
 if v:version > 703 || v:version == 703 && has("patch541")
-  set formatoptions+=j 	" delete comment char on second line when
-                        " joining two commented lines
+  set formatoptions+=j   " delete comment char on second line when joining two commented lines
 endif
 
-set showmatch  		    " when inserting a bracket, briefly jump to its
-                        " match
+set showmatch            " when inserting a bracket, briefly jump to its
+                         " match
 
-set nojoinspaces  	    " Use only one space after '.' when joining
-                        " lines, instead of two
+set nojoinspaces         " Use only one space after '.' when joining
+                         " lines, instead of two
 
-"set completeopt+=longest  " better omni-complete menu
+"set completeopt+=longest " better omni-complete menu
 
-"set nrformats-=octal      " don't treat numbers with leading zeros as octal
-                           " when incrementing/decrementing
+"set nrformats-=octal     " don't treat numbers with leading zeros as octal when incrementing/decrementing
 
 " ----------------------------------------------------------------------------
 "  tabs and indenting
@@ -210,7 +213,7 @@ set shiftround            " round to 'shiftwidth' for "<<" and ">>"
 " ----------------------------------------------------------------------------
 "  folding
 " ----------------------------------------------------------------------------
-set nofoldenable 		  " When opening files, all folds open by default
+set nofoldenable 		      " When opening files, all folds open by default
 
 " ----------------------------------------------------------------------------
 "  diff mode
