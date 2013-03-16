@@ -17,7 +17,7 @@ Bundle 'gmarik/vundle'
 "Bundle 'vim-ruby/vim-ruby'
 
 " Comment plugin
-"Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-commentary'
 
 " Syntax check on buffer save
 "Bundle 'scrooloose/syntastic'
