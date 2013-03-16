@@ -60,6 +60,7 @@ if has('autocmd')
 " ----------------------------------------------------------------------------
 set nostartofline      " keep cursor in same column for long-range motion cmds
 set incsearch          " Highlight pattern matches as you type
+set hlsearch           " Highlight all matched patterns 
 set ignorecase         " ignore case when using a search pattern
 set smartcase          " override 'ignorecase' when pattern
                        " has upper case character
@@ -97,13 +98,13 @@ if &listchars ==# 'eol:$'
   endif
 endif
 
-set number			   " show line numbers
+"set number			   " show line numbers
 set relativenumber " show line numbers relative to the cursor
 " ----------------------------------------------------------------------------
 "  syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
 set background=dark
-set colorcolumn=80    " display a line in column 80 to show you
+"set colorcolumn=80    " display a line in column 80 to show you
                       " when to line break.
 colorscheme wombat256mod
 
