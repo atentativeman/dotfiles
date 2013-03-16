@@ -98,7 +98,7 @@ if &listchars ==# 'eol:$'
   endif
 endif
 
-"set number			   " show line numbers
+"set number        " show line numbers
 set relativenumber " show line numbers relative to the cursor
 " ----------------------------------------------------------------------------
 "  syntax, highlighting and spelling
@@ -114,7 +114,7 @@ colorscheme wombat256mod
 set laststatus=2      " Show a status line, even if there's only one
                       " Vim window
 
-set hidden		      " allow switching away from current buffer w/o
+set hidden            " allow switching away from current buffer w/o
                       " writing
 
 set switchbuf=usetab  " Jump to the 1st open window which contains
@@ -149,14 +149,14 @@ set helpheight=30         " Set window height when opening Vim help windows
 " ----------------------------------------------------------------------------
 "  terminal
 " ----------------------------------------------------------------------------
-set ttyfast			      " this is the 21st century, people
+set ttyfast           " this is the 21st century, people
 
 " ----------------------------------------------------------------------------
 "  using the mouse
 " ----------------------------------------------------------------------------
 
 " ----------------------------------------------------------------------------
-"  GUI				      " Set these options in .gvimrc
+"  GUI              " Set these options in .gvimrc
 " See help for 'setting-guifont' for tips on how to set guifont on Mac vs Windows
 " ----------------------------------------------------------------------------
 
@@ -168,7 +168,7 @@ set ttyfast			      " this is the 21st century, people
 "  messages and info
 " ----------------------------------------------------------------------------
 
-set showcmd			    " In the status bar, show incomplete commands
+set showcmd         " In the status bar, show incomplete commands
                     " as they are typed
 
 set ruler           " Always display the current cursor position in
@@ -180,10 +180,10 @@ set confirm         " Ask to save buffer instead of failing when executing
 " ----------------------------------------------------------------------------
 "  selecting text
 " ----------------------------------------------------------------------------
-set clipboard=unnamed	" Yank to the system clipboard by default
+set clipboard=unnamed " Yank to the system clipboard by default
 
 " ----------------------------------------------------------------------------
-"  editing text			" TODO: look at these options
+"  editing text       " TODO: look at these options
 " ----------------------------------------------------------------------------
 set backspace=indent,eol,start  "backspace over everything
 
@@ -214,7 +214,7 @@ set shiftround            " round to 'shiftwidth' for "<<" and ">>"
 " ----------------------------------------------------------------------------
 "  folding
 " ----------------------------------------------------------------------------
-set nofoldenable 		      " When opening files, all folds open by default
+set nofoldenable          " When opening files, all folds open by default
 
 " ----------------------------------------------------------------------------
 "  diff mode
@@ -227,7 +227,7 @@ set nofoldenable 		      " When opening files, all folds open by default
 " ----------------------------------------------------------------------------
 "  reading and writing files
 " ----------------------------------------------------------------------------
-set autoread			    " Automatically re-read files changed outside
+set autoread          " Automatically re-read files changed outside
                       " of Vim
 
 " ----------------------------------------------------------------------------
